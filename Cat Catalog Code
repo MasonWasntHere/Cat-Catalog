@@ -1,0 +1,177 @@
+class Cat:
+    def __init__(self, name, family):
+        self.name = name
+        self.family = family
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Family: {self.family}")
+
+class RustySpottedCat(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Rusty-spotted cat",
+            family="Felidae"
+        )
+
+class BlackFootedCat(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Black-footed cat",
+            family="Felidae"
+        )
+
+class OrangeTabbyCat(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Orange Tabby cat",
+            family="Felidae"
+        )
+
+class Chartreux(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Chartreux",
+            family="Felidae"
+        )
+
+class TurkishVan(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Turkish Van",
+            family="Felidae"
+        )
+
+class Munchkin(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Munchkin",
+            family="Felidae"
+        )
+
+class Persian(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Persian",
+            family="Felidae"
+        )
+
+class SnowLeopard(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Snow Leopard",
+            family="Felidae"
+        )
+
+class KurilianBobtail(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Kurilian Bobtail",
+            family="Felidae"
+        )
+
+class Siamese(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Siamese",
+            family="Felidae"
+        )
+
+class TiffanyCat(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Tiffany cat",
+            family="Felidae"
+        )
+
+class FishCat(Cat):
+    def __init__(self):
+        super().__init__(
+            name="Fish cat",
+            family="Felidae"
+        )
+
+# Dictionary to map user input to cat classes
+cat_catalog = {
+    "1": RustySpottedCat,
+    "2": BlackFootedCat,
+    "3": OrangeTabbyCat,
+    "4": Chartreux,
+    "5": TurkishVan,
+    "6": Munchkin,
+    "7": Persian,
+    "8": SnowLeopard,
+    "9": KurilianBobtail,
+    "10": Siamese,
+    "11": TiffanyCat,
+    "12": FishCat
+}
+
+def title_screen():
+    print("           ████████                                                                         ")
+    print("          ███    ████              ███                                                      ")
+    print("         ███             ██████   ██████                                                    ")
+    print("         ██            ███   ███   ███                                                      ")
+    print("         ██                █████   ███                                                      ")
+    print("         ███      ███  █████  ██   ███                                                      ")
+    print("          ██████████   ███   ███   ███                                                      ")
+    print("             █████      █████████   ████                                                    ")
+    print("                                                                                            ")
+    print("                                                                                            ")
+    print("                                                                                            ")
+    print("                                                                                            ")
+    print("                                                                                            ")
+    print("                                                                                            ")
+    print("                    ███                                                                     ")
+    print("                 █████████                ██                ██                              ")
+    print("                ███     ███              ████               ██                              ")
+    print("               ███            ████████  ██████  █████████   ██    ████████    █████████     ")
+    print("               ███                  ███   ██          ███   ██   ███    ███  ███    ███     ")
+    print("               ███             ████████   ██     ████████   ██  ███     ███  ███     ██     ")
+    print("                ███     ███   ██    ███   ██    ██    ███   ██   ███    ███  ███    ███     ")
+    print("                 █████████    █████████   ████  █████████   ██    ████████    █████████     ")
+    print("                                                                                     ██     ")
+    print("                                                                              █████████     ")
+    print("                                                                                ████        ")
+    print("")                                                                                                           
+    print("Welcome to the Cat Catalog!")
+    print("")
+
+def display_menu():
+    print("Please select one of the following cats to learn about them!")
+    print("")
+    print("1. Rusty-spotted cat")
+    print("2. Black-footed cat")
+    print("3. Orange Tabby cat")
+    print("4. Chartreux")
+    print("5. Turkish Van")
+    print("6. Munchkin")
+    print("7. Persian")
+    print("8. Snow Leopard")
+    print("9. Kurilian Bobtail")
+    print("10. Siamese")
+    print("11. Tiffany cat")
+    print("12. Fish cat")
+    print("13. Exit")
+    print("")
+
+def main():
+    title_screen()
+    while True:
+        display_menu()
+        choice = input("Enter the number of the cat you want to learn about: ")
+
+        if choice == "13":
+            print("Thank you for using the Cat Catalog. Goodbye!")
+            break
+        elif choice in cat_catalog:
+            cat = cat_catalog[choice]()
+            cat.display_info()
+            print("")
+            input("Press Enter to continue...")
+        else:
+            print("Invalid choice. Please select a valid number.")
+            print("")
+
+if __name__ == "__main__":
+    main()

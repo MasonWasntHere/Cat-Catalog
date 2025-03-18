@@ -1,2 +1,1 @@
-# Cat-Catalog
-This code is based on using inheritance and letting you learn about 12 different types of cats.
+In this code, you are able to find out information from 12 different types of cats. Inside of this code, it uses stuff like inheritance, functions, loops, ifs, dictionaries, and more. When you type in a number for a cat, it gives you information about the said and then shows an ascii art of the following cat. 
